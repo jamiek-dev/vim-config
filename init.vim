@@ -39,38 +39,28 @@ set cursorline
 colorscheme inkpot
 " colorscheme atom-dark
 " colorscheme jellybeans
-
 " set background=dark
 " colorscheme PaperColor
-
 " colorscheme harlequin
 " colorscheme distinguished
-
 " colorscheme challenger_deep
-
-" let g:airline_theme='onehalfdark'
-" " lightline
-" let g:lightline.colorscheme='onehalfdark'
 
 let g:jsx_ext_required = 1
 
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
-" default, palenight, ocean, lighter, darker, 
-" default-community, palenight-community, ocean-community, lighter-community, darker-community
-" let g:material_theme_style = 'default'
-" colorscheme material
-" set number
-
 nnoremap <C-p><C-h> :cd %:p:h<CR>
 nnoremap <C-n><C-t> :NERDTreeToggle %:p:h<CR>
+
 " Open terminal in the current directory
 nnoremap <C-o><C-t> :let $VIM_DIR=expand('%:p:h')<CR>:terminal<CR>cd $VIM_DIR<CR>
+
 " Ignore .git directory and whatnot and respect .gitignore when searching
 nnoremap <expr> <C-_> (len(system('git rev-parse')) ? ':Files' : ':GFiles --exclude-standard --others --cached')."\<cr>"
 map <space> <C-w>
 
+" Prefixed with initials to reasily remember custom commands
 command! JKgetconf :e ~/.config/nvim/init.vim
 command! JKreconf source ~/.config/nvim/init.vim
 
