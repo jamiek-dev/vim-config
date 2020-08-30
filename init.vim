@@ -21,11 +21,16 @@ Plug 'chrisbra/NrrwRgn'
 Plug 'mxw/vim-jsx'
 Plug 'sonph/onehalf'
 Plug 'jremmen/vim-ripgrep'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'yuezk/vim-js'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tomasiser/vim-code-dark'
 call plug#end()
 
 set expandtab       "Use softtabstop spaces instead of tab characters for indentation
-set shiftwidth=4    "Indent by 4 spaces when using >>, <<, == etc.
-set softtabstop=4   "Indent by 4 spaces when pressing <TAB>
+set shiftwidth=2    "Indent by 4 spaces when using >>, <<, == etc.
+set softtabstop=2   "Indent by 4 spaces when pressing <TAB>
 set autoindent      "Keep indentation from previous line
 set smartindent     "Automatically inserts indentation in some cases
 set cindent         "Like smartindent, but stricter and more customisable
@@ -36,7 +41,6 @@ set t_Co=256
 set cursorline
 " colorscheme onehalflight
 " colorscheme onehalfdark
-colorscheme inkpot
 " colorscheme atom-dark
 " colorscheme jellybeans
 " set background=dark
@@ -44,7 +48,8 @@ colorscheme inkpot
 " colorscheme harlequin
 " colorscheme distinguished
 " colorscheme challenger_deep
-
+" colorscheme inkpot
+colorscheme codedark
 let g:jsx_ext_required = 1
 
 filetype plugin on
